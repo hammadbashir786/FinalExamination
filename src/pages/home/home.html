@@ -1,0 +1,30 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Upcoming Expiries</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="navi()">
+        <ion-icon name="add" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let med of showMedicines|order-by:'date'">
+    
+        <ion-card-header>
+          {{ med.name }}
+        </ion-card-header>
+        <ion-card-content>
+          {{ med.quantity }}
+        </ion-card-content>
+        <ion-card-content>
+          {{ med.date }}
+        </ion-card-content>
+      </ion-card>
+</ion-content>

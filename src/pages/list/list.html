@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Medicine</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  <ion-buttons>
+    <button ion-button icon-end  (click)="openCamera()">
+      
+      <ion-icon name="camera"></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="medicine.name" name="name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Quantity</ion-label>
+      <ion-input type="text" [(ngModel)]="medicine.quantity" name="quantity"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label floating>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="medicine.date"></ion-datetime>
+    </ion-item>
+
+    
+
+  </ion-list>
+
+  <button ion-button full color="primary" (click) = "submit()">Submit</button>
+
+  <img src="{{clickedImage}}" />
+</ion-content>
