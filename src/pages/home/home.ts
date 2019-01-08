@@ -14,7 +14,7 @@ import firebase from 'firebase';
 })
 export class HomePage {
 
-  chat = {email:"", message:""}
+ 
   
   showMedicines:Array<any> = [];
   public itemRef: firebase.database.Reference = firebase.database().ref('/medicines');
@@ -31,10 +31,7 @@ export class HomePage {
     
 }
 
-sendMessage(){
-  this.chat.email = this.fire.auth.currentUser.email;
-  this.db.list('/messages').push(this.chat);
-}
+
 
 navi(){
   this.navCtrl.push(ListPage);

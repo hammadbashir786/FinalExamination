@@ -31,11 +31,7 @@ export class ListPage {
   name: any;
   quantity:any;
   mydate;
-datePickerObj:  any  = {
-  SDate: new Date(), // Default null
-  
 
-};
 
   medicine: any ={
     name:'',
@@ -66,9 +62,7 @@ datePickerObj:  any  = {
      });
   }
 
-  gochatPage(){
-    this.navCtrl.push(HomePage);
-  }
+ 
 
   datePick(){
   
